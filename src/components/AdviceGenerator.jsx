@@ -18,7 +18,6 @@ function AdviceGenerator() {
         try {
             const response = await fetchRandomAdvice();
             setAdviceData(response.data);
-            console.log(response.data);
         } catch (err) {
             setError(err);
         } finally {
@@ -32,8 +31,8 @@ function AdviceGenerator() {
 
     return (
     <>
-      <div className="bg-secondary text-contrast w-1/3 rounded-xl">
-            <div className="flex flex-col justify-center items-center p-10 pb-14 text-center gap-10 relative">
+      <div className="bg-secondary text-contrast w-[90%] sm:w-[570px] rounded-xl">
+            <div className="flex flex-col justify-center items-center p-8 sm:p-10 pb-14 text-center gap-10 relative">
                 {loading && <div><BeatLoader color="#52FFA8" /></div>}
                 {error && <div>Error: {error.message}</div>}
                 {!loading && !error && adviceData && (
@@ -41,17 +40,22 @@ function AdviceGenerator() {
                         <p className="text-sm tracking-[.25em] uppercase text-accent ">
                             Advice #{adviceData.slip.id}
                         </p>
-                        <p className="text-3xl tracking-wide font-extrabold text-contrast ">
-                            {adviceData.slip.advice}
+                        <p className="text-2xl sm:text-3xl tracking-wide font-extrabold text-contrast ">
+                        &quot;{adviceData.slip.advice}&quot;
                         </p>
                     </>
                 )}
-                <img src="/images/pattern-divider-desktop.svg"></img>
-                <div className="absolute bottom-[-40px]">
-                    <button disabled={loading } onClick={fetchAdvice} 
+                <div className='hidden sm:block pb-6'>
+                    <img src="/images/pattern-divider-desktop.svg"></img>
+                </div>
+                <div className='block sm:hidden pb-2'>
+                    <img src="/images/pattern-divider-mobile.svg"></img>
+                </div>
+                <div className="absolute bottom-[-30px]">
+                <button disabled={loading } onClick={fetchAdvice} 
                     className="rounded-full bg-accent p-4 transition-shadow duration-150 hover:shadow-glow disabled:pointer-events-none	">
-                        <img src="/images/icon-dice.svg" alt="Dice Icon" className="w-6 h-6" />
-                    </button>
+                    <img src="/images/icon-dice.svg" alt="Dice Icon" className="w-6 h-6" />
+                </button>
                 </div>
             </div>
         </div>
