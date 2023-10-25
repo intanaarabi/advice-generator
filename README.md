@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/advice-generator-with-react-tailwind-css-8G2IQg0JdV)
+- Live Site URL: [Live site URL](https://intanaarabi.github.io/advice-generator/)
 
 ## My process
 
@@ -41,6 +41,6 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@intanaarabi](https://www.frontendmentor.io/profile/intanaarabi)
 
 
