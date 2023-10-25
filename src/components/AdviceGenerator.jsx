@@ -46,15 +46,15 @@ function AdviceGenerator() {
                     </>
                 )}
                 <div className='hidden sm:block pb-6'>
-                    <img src="/images/pattern-divider-desktop.svg"></img>
+                    <img src="./images/pattern-divider-desktop.svg"></img>
                 </div>
                 <div className='block sm:hidden pb-2'>
-                    <img src="/images/pattern-divider-mobile.svg"></img>
+                    <img src="./images/pattern-divider-mobile.svg"></img>
                 </div>
                 <div className="absolute bottom-[-25px]">
                 <button disabled={loading } onClick={fetchAdvice} 
                     className="rounded-full bg-accent p-4 transition-shadow duration-150 hover:shadow-glow disabled:pointer-events-none	">
-                    <img src="/images/icon-dice.svg" alt="Dice Icon" className="w-6 h-6" />
+                    <img src="./images/icon-dice.svg" alt="Dice Icon" className="w-6 h-6" />
                 </button>
                 </div>
             </div>
